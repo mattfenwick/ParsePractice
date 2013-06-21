@@ -133,9 +133,6 @@ data Silly
 ws :: Parser Char String
 ws = many1 (satisfy (flip elem " \t\n\r\f\f"))
 
-munch :: Parser Char a -> Parser Char a
-munch p = optionalM ws *> p
-
 op = string "("
 cp = string ")"
 oc = string "{"
